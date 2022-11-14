@@ -21,7 +21,7 @@ const ContactsScreen = props => {
       // declare an empty array that will store the results of the
       // SELECT
       let results = [];
-      // declare a transation that will execute the SELECT
+      // declare a transaction that will execute the SELECT
       myContactsDB.transaction(txn => {
         // execute SELECT
         txn.executeSql(

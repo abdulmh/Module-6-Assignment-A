@@ -11,7 +11,7 @@ import { openDatabase } from "react-native-sqlite-storage";
 const myContactsDB = openDatabase({name: 'MyContacts.db'});
 const groupsTableName = 'groups';
 
-// this function displays all rows of data in the films table
+// this function displays all rows of data in the groups table
 const AddContactGroupScreen = props => {
 
     // this variable contains the id, name, date, ane store of an item
@@ -47,10 +47,9 @@ const AddContactGroupScreen = props => {
                 let item = res.rows.item(i);
                 results.push({
                     id: item.id,
-                    fullname: item.fullname,
-                    phone: item.phone,
-                    email: item.email, 
-                    contact_id: post.id, 
+                    name: item.name,
+                    description: item.description, 
+                    group_id: post.id, 
                 });
               }
               // assign results array to items state variable

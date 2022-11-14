@@ -119,7 +119,7 @@ module.exports = {
             );
         });
     },
-    // declare function that will insert a row into the films table
+    // declare function that will insert a row into the groups table
     addGroupContacts: async function (contact_id, group_id) {
         // declare a transaction that will execute an SQL statement
         (await myContactsDB).transaction(txn => {
